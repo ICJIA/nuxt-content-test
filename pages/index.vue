@@ -1,7 +1,9 @@
 <template>
-  <v-container>
+  <v-container v-if="page && articles">
     <h1>{{ page.title }}</h1>
     <nuxt-content :document="page" />
+
+    {{ articles }}
   </v-container>
 </template>
 
@@ -9,9 +11,10 @@
 export default {
   async asyncData({ $content }) {
     const page = await $content("home").fetch();
-    console.log(page);
+    const articles = await $content("articles").sortBy("title").fetch();
     return {
       page,
+      articles,
     };
   },
 };
