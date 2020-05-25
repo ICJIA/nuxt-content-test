@@ -28,11 +28,11 @@ export default {
       error,
     };
   },
-  // created() {
-  //   if (this.error) {
-  //     this.$router.push("/404");
-  //   }
-  // },
+  created() {
+    if (this.error) {
+      this.$router.push("/404");
+    }
+  },
 };
 </script>
 

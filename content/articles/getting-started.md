@@ -1,5 +1,5 @@
 ---
-title: this is a second page
+title: this is the getting started page
 slug: getting-started
 created: "2020-04-30"
 summary: "This is the getting started summary"
