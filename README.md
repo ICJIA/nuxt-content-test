@@ -1,6 +1,6 @@
 # nuxt-content-test
 
-> My priceless Nuxt.js project
+> Nuxt content test
 
 ## Build Setup
 
