@@ -11,10 +11,10 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: process.env.npm_package_description || "",
+      },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Customize the progress-bar color
@@ -31,7 +31,10 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    // TODO: Remove when upgrading to nuxt 2.13+
+    "@nuxt/components",
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -40,7 +43,7 @@ export default {
     "@nuxtjs/axios",
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
-    "@nuxt/content"
+    "@nuxt/content",
   ],
   content: {
     // Options
@@ -57,6 +60,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
-};
+    // eslint-disable-next-line no-unused-vars
+    extend(config, ctx) {},
+  },
+}
