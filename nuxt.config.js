@@ -47,10 +47,11 @@ export default {
   ],
   content: {},
   generate: {
-    fallback: "404.html",
     async routes() {
       const { $content } = require("@nuxt/content");
       const files = await $content("articles").only(["path"]).fetch();
+      const test = await $content().only(["path"]).fetch();
+      console.log(test);
       return files.map((file) => file.path);
     },
   },

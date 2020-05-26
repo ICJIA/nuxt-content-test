@@ -1,18 +1,12 @@
 <template>
   <div>
-    <div v-if="article && !error">
+    <div v-if="article">
       {{ $route.params.slug }}
-
       <p>{{ article }}</p>
     </div>
-    <div v-else class="mt-12 text-center">
-      <v-progress-circular
-        :size="70"
-        :width="7"
-        color="purple"
-        indeterminate
-      ></v-progress-circular>
-    </div>
+    <!-- <div v-else class="mt-12 text-center">
+      <v-progress-circular :size="70" :width="7" color="purple" indeterminate />
+    </div>-->
   </div>
 </template>
 

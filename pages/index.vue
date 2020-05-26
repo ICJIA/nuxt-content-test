@@ -16,7 +16,7 @@
 <script>
 export default {
   async asyncData({ $content }) {
-    const page = await $content("home").fetch();
+    const page = await $content("index").fetch();
     const articles = await $content("articles")
       .sortBy("created", "desc")
       .fetch();
