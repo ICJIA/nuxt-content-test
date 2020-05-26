@@ -6,14 +6,12 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build --target static && nuxt export",
+    "build": "nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt build --target static && nuxt export",
+    "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "serve": "nuxt serve",
-    "export": "nuxt build --target static && nuxt export",
-    "target": "nuxt build --target static"
+    "serve": "serve ./dist"
   },
   "dependencies": {
     "@mdi/font": "^5.3.45",
@@ -21,7 +19,7 @@
     "@nuxtjs/axios": "^5.10.3",
     "@nuxtjs/dotenv": "^1.4.1",
     "css-loader": "^3.5.3",
-    "nuxt-edge": "^2.13.0-26506104.f13b3752",
+    "nuxt": "^2.12.2",
     "vuetify": "^2.2.29"
   },
   "devDependencies": {

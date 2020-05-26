@@ -1,6 +1,5 @@
 export default {
-  target: "static",
-  ssr: true, // similar to mode: 'universal'
+  mode: "universal",
   /*
    ** Headers of the page
    */
@@ -34,11 +33,8 @@ export default {
    */
   buildModules: [
     // TODO: Remove when upgrading to nuxt 2.13+
-    //"@nuxt/components",
+    "@nuxt/components",
   ],
-  components: {
-    dirs: [{ path: "@/components", pattern: "*.vue" }],
-  },
   /*
    ** Nuxt.js modules
    */
@@ -52,16 +48,12 @@ export default {
   content: {
     fullTextSearchFields: ["title", "summary", "slug"],
   },
-  // generate: {
-  //   async routes() {
-  //     const { $content } = require("@nuxt/content");
-  //     const files = await $content("articles").only(["path"]).fetch();
-  //     return files.map((file) => file.path);
-  //   },
-  // },
   generate: {
-    fallback: "404.html", // for Netlify
-    routes: ["/"], // give the first url to start crawling
+    async routes() {
+      const { $content } = require("@nuxt/content");
+      const files = await $content("articles").only(["path"]).fetch();
+      return files.map((file) => file.path);
+    },
   },
   /*
    ** Axios module configuration
