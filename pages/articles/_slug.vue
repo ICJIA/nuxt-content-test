@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="article">
+    <div v-if="article && !error">
       {{ $route.params.slug }}
       <p>{{ article }}</p>
     </div>
