@@ -4,7 +4,7 @@
       {{ $route.params.slug }}
       <p>{{ article[0] }}</p>
       Rendered:
-      <br>
+      <br >
       <nuxt-content :document="article[0]" />
       <!-- <div v-else class="mt-12 text-center">
       <v-progress-circular :size="70" :width="7" color="purple" indeterminate />
