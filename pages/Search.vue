@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col cols="12">
-          <h1>Search</h1>
+          <h1>Test Search</h1>
           <v-text-field
             v-model="q"
             autocomplete="new"
