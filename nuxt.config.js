@@ -59,16 +59,8 @@ export default {
   },
   hooks: {
     "content:file:beforeInsert": (document) => {
-      // const moment = require("moment");
-      // // eslint-disable-next-line no-unused-vars
-      // const tz = require("moment-timezone");
-
       if (document.extension === ".md") {
         document.markdown = document.text;
-        // const createdLocal = moment(document.created).tz("America/Chicago");
-        // document.createdLocal = createdLocal;
-        // const updatedAtLocal = moment(document.updatedAt).tz("America/Chicago");
-        // document.updatedAtLocal = updatedAtLocal;
       }
     },
   },
