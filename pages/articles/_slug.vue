@@ -16,6 +16,7 @@
 
 <script>
 export default {
+  components: {},
   async asyncData({ $content, params }) {
     const article = await $content("articles")
       .where({ slug: params.slug })

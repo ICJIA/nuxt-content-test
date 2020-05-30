@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is a test Vue component
+    <h2>This is a test Vue component</h2>
   </div>
 </template>
 
