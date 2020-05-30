@@ -2,6 +2,10 @@
 
 > Nuxt content test
 
+## Demo
+
+https://nuxt-content-test.now.sh/
+
 ## Build Setup
 
 ```bash

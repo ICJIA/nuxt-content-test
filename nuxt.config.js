@@ -24,7 +24,7 @@ export default {
    ** Global CSS
    */
   css: [],
-  /*
+  /*a
    ** Plugins to load before mounting the App
    */
   plugins: ["~plugins/vuetify.js"],
@@ -52,7 +52,16 @@ export default {
     async routes() {
       const { $content } = require("@nuxt/content");
       const files = await $content("articles").only(["path"]).fetch();
-      return files.map((file) => file.path);
+      return files.map((file) => {
+        return file.path;
+      });
+    },
+  },
+  hooks: {
+    "content:file:beforeInsert": (document) => {
+      if (document.extension === ".md") {
+        document.markdown = document.text;
+      }
     },
   },
   /*

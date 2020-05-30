@@ -1,7 +1,7 @@
 <template>
   <v-container v-if="page && articles">
     <h1>{{ page.title }}</h1>
-    <nuxt-content :document="page" />
+    <nuxt-content :document="page" @click="click" />
     <h2 class="mt-8">
       Articles
     </h2>
@@ -31,6 +31,9 @@ export default {
     routeToArticle(slug) {
       if (!slug) return;
       this.$router.push(`articles/${slug}`);
+    },
+    click() {
+      console.log("click");
     },
   },
 };

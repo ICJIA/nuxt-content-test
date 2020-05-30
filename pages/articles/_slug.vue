@@ -1,13 +1,14 @@
 <template>
   <div>
     <v-container>
-      <div v-if="article && !error">
-        {{ $route.params.slug }}
-        <p>{{ article }}</p>
-      </div>
+      {{ $route.params.slug }}
+      <p>{{ article[0] }}</p>
+      Rendered:
+      <br>
+      <nuxt-content :document="article[0]" />
       <!-- <div v-else class="mt-12 text-center">
       <v-progress-circular :size="70" :width="7" color="purple" indeterminate />
-    </div>-->
+      </div>-->
     </v-container>
   </div>
 </template>
@@ -19,9 +20,11 @@ export default {
       .where({ slug: params.slug })
       .fetch();
     const error = article.length ? false : true;
+    const page = await $content("index").fetch();
     return {
       article,
       error,
+      page,
     };
   },
   created() {
