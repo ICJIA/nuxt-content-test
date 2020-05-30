@@ -44,7 +44,16 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv",
     "@nuxt/content",
+    "nuxt-compress",
   ],
+  "nuxt-compress": {
+    gzip: {
+      cache: true,
+    },
+    brotli: {
+      threshold: 10240,
+    },
+  },
   content: {
     fullTextSearchFields: ["title", "summary", "slug"],
   },

@@ -24,6 +24,7 @@
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.31",
     "nuxt": "^2.12.2",
+    "nuxt-compress": "^2.0.0",
     "vuetify": "^2.2.29"
   },
   "devDependencies": {
