@@ -33,7 +33,7 @@ export default {
    */
   buildModules: [
     // TODO: Remove when upgrading to nuxt 2.13+
-    "@nuxt/components",
+    //"@nuxt/components",
   ],
   /*
    ** Nuxt.js modules
