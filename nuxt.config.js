@@ -58,13 +58,13 @@ export default {
     fullTextSearchFields: ["title", "summary", "slug"],
   },
   generate: {
-    async routes() {
-      const { $content } = require("@nuxt/content");
-      const files = await $content("articles").only(["path"]).fetch();
-      return files.map((file) => {
-        return file.path;
-      });
-    },
+    // async routes() {
+    //   const { $content } = require("@nuxt/content");
+    //   const files = await $content("articles").only(["path"]).fetch();
+    //   return files.map((file) => {
+    //     return file.path;
+    //   });
+    // },
   },
   hooks: {
     "content:file:beforeInsert": (document) => {
