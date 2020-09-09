@@ -1,7 +1,5 @@
 <template>
-  <div>
-    article listing here
-  </div>
+  <div>article listing here</div>
 </template>
 
 <script>
